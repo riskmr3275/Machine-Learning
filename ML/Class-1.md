@@ -6,17 +6,17 @@ AI is the big umbrella under which machines are designed to mimic human intellig
 
 ### Key Idea:
 Make machines smart enough to act like humans.
-
+     
 ### Examples:
 - **Self-Driving Cars**: Understand traffic and make driving decisions.
 - **Virtual Assistants**: Alexa, Siri, Google Assistant respond to user commands.
 - **AI in Games**: Programs that play chess or video games against humans.
 
 ---
-
+#Hello World this is the test message
 ## **2. Machine Learning (ML)**
 ### Definition:
-ML is a subset of AI. Instead of giving explicit instructions, ML teaches machines to learn from data and improve with experience.
+ML is a subset of  AI. Instead of giving explicit instructions, ML teaches machines to learn from data and improve with experience.
 
 ### How it Works:
 1. Feed data into the machine.
