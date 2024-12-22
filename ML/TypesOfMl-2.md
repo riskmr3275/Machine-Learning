@@ -7,6 +7,31 @@ The machine learns from labeled data (input-output pairs are provided).
 ### How it Works:
 The model is trained on a dataset where the output (target) is already known, and it learns to predict outcomes for new data.
 
+# Types of Data and Supervised Learning
+
+## Data Types
+1. **Numerical Data**:
+   - Examples: Age, Weight, CGPA, IQ
+
+2. **Categorical Data**:
+   - Examples: Gender, Nationality
+
+## Supervised Learning
+Supervised learning involves using labeled input and output data to train models. Depending on the type of output, supervised learning can be classified into two categories:
+
+### 1. Regression
+   - **Definition**: If the output (target variable) is numerical, the problem is termed as a **Regression** task.
+   - **Examples**:
+     - Predicting house prices.
+     - Estimating a student's CGPA.
+
+### 2. Classification
+   - **Definition**: If the output (target variable) is categorical, the problem is termed as a **Classification** task.
+   - **Examples**:
+     - Identifying the gender of a person based on features.
+     - Determining the nationality of a person from a dataset.
+
+
 ### Examples:
 - **Predicting House Prices**: Based on features like size, location, and number of rooms.
 - **Email Spam Classification**: Classifying emails as spam or not spam.

@@ -13,7 +13,7 @@ Make machines smart enough to act like humans.
 - **AI in Games**: Programs that play chess or video games against humans.
 
 ---
-#Hello World this is the test message
+#Hello World, It just a test message
 ## **2. Machine Learning (ML)**
 ### Definition:
 ML is a subset of  AI. Instead of giving explicit instructions, ML teaches machines to learn from data and improve with experience.
