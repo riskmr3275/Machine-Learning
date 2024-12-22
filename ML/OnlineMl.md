@@ -1,5 +1,4 @@
 # Define the content for the Markdown file
-content = """
 # Online Machine Learning  
 
 **Online Machine Learning** is a method where the model learns from data as it arrives, little by little. Unlike batch learning, it doesn't wait for all the data to be available at once. Instead, it updates its knowledge whenever new data comes in, making it suitable for tasks where data changes continuously.  
@@ -59,11 +58,4 @@ Imagine preparing for a spelling bee:
 ---
 
 Let me know if you'd like to add more examples or adjust anything further!
-"""
-
-# Save the content to a Markdown file
-file_path = "/mnt/data/Online_Machine_Learning.md"
-with open(file_path, "w") as file:
-    file.write(content)
-
-file_path
+ 
