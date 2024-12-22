@@ -12,24 +12,98 @@ The model is trained on a dataset where the output (target) is already known, an
 ## Data Types
 1. **Numerical Data**:
    - Examples: Age, Weight, CGPA, IQ
+   - **Representation**: Numerical values, e.g., `Age = 25`, `Weight = 68.5 kg`, `CGPA = 3.9`, `IQ = 120`.
 
 2. **Categorical Data**:
    - Examples: Gender, Nationality
+   - **Representation**: Categories or labels, e.g., `Gender = Male/Female`, `Nationality = Indian/American`.
+
+---
 
 ## Supervised Learning
-Supervised learning involves using labeled input and output data to train models. Depending on the type of output, supervised learning can be classified into two categories:
+Supervised learning involves using labeled input and output data to train models. Depending on the type of output, supervised learning can be categorized into **Regression** and **Classification**.
+
+---
 
 ### 1. Regression
    - **Definition**: If the output (target variable) is numerical, the problem is termed as a **Regression** task.
-   - **Examples**:
-     - Predicting house prices.
-     - Estimating a student's CGPA.
+   - **Mathematical Representation**: 
+     - For a dataset \( D = \{(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\} \), where \( x_i \) represents input features and \( y_i \) is the numerical output.
+     - The regression model predicts \( y \) as:
+       \[
+       \hat{y} = f(x) = w \cdot x + b
+       \]
+       where \( w \) is the weight (slope), and \( b \) is the bias (intercept).
+   - **Visualization**:
+     A straight line representing the relationship between \( x \) (input) and \( y \) (output) on a 2D plot:
+     ```
+     x-axis: Input (e.g., Study Hours)
+     y-axis: Output (e.g., CGPA)
+
+           ^
+           |
+         4 |          *
+           |        *
+         3 |     *
+           |   *
+         2 | *
+           +-------------------->
+             10     20     30
+                 Study Hours
+     ```
+   - **Example Equation**:
+     \[
+     CGPA = 0.05 \cdot \text{Study Hours} + 2.5
+     \]
+
+---
 
 ### 2. Classification
    - **Definition**: If the output (target variable) is categorical, the problem is termed as a **Classification** task.
-   - **Examples**:
-     - Identifying the gender of a person based on features.
-     - Determining the nationality of a person from a dataset.
+   - **Mathematical Representation**: 
+     - The classification model predicts probabilities for each category \( C_k \):
+       \[
+       P(C_k | x) = \frac{1}{1 + e^{-(w \cdot x + b)}}
+       \]
+       where \( w \) is the weight, \( x \) is the input, and \( b \) is the bias.
+   - **Visualization**:
+     A scatter plot showing the separation of categories (e.g., Male vs. Female based on height and weight):
+     ```
+     x-axis: Height (cm)
+     y-axis: Weight (kg)
+
+           ^
+           |     M    F
+         80|     M    F
+           |  M  M    F
+         60|  M  M    F
+           +-------------------->
+             150  160  170  180
+                   Height
+     ```
+     \( M = Male \), \( F = Female \)
+
+   - **Example Equation**:
+     For logistic regression:
+     \[
+     P(\text{Gender = Male}) = \frac{1}{1 + e^{-(1.2 \cdot \text{Height} - 0.8 \cdot \text{Weight} + 3)}}
+     \]
+
+---
+
+## Summary
+1. **Regression**:
+   - Used for predicting continuous outputs.
+   - Visualization: A line or curve representing the relationship between \( x \) and \( y \).
+   - Example: Predicting CGPA or house prices.
+
+2. **Classification**:
+   - Used for predicting categorical outputs.
+   - Visualization: A scatter plot with distinct regions for different categories.
+   - Example: Identifying gender based on height and weight.
+
+Both tasks rely on input-output relationships to make accurate predictions.
+
 
 
 ### Examples:
