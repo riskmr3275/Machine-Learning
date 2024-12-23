@@ -1,5 +1,4 @@
-# Define the content for the Markdown file
-content = """
+
 # Instance-Based vs Model-Based Machine Learning  
 
 Machine Learning methods can be broadly divided into two types:  
@@ -87,9 +86,4 @@ In the graph, the model finds a line or curve that best fits the data:
   Instead of remembering all photos, you create a rule like: “A classmate is anyone wearing the school uniform.” You apply this rule to new faces.  
 """
 
-# Save the content to a Markdown file
-file_path = "/mnt/data/Instance_vs_Model_Based_ML.md"
-with open(file_path, "w") as file:
-    file.write(content)
-
-file_path
+ 
