@@ -96,3 +96,9 @@ An ML Engineer focuses on deploying machine learning models into production.
 | **Mathematical Depth**   | Low to moderate                     | Low to moderate                       | High                                  | Moderate to high                      |
 | **Programming Depth**    | Low                                 | High                                  | High                                  | High                                  |
 | **Industry Role**        | Decision support                    | Data preparation and infrastructure   | Advanced analytics and predictions    | Model deployment and scaling          |
+
+
+
+
+## For Further Read 
+Link:- https://medium.com/campusx/exploring-the-mystery-behind-different-job-titles-for-machine-learning-and-data-science-9352849f283a
