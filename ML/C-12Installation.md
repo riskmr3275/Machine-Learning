@@ -1,6 +1,4 @@
-# Creating the markdown content as a string and saving it into a .md file
-
-markdown_content = """
+ 
 # Anaconda Installation Guide for All Platforms
 
 Anaconda is a free, open-source distribution of Python and R that simplifies package management and deployment. It includes many useful libraries and tools for data science, machine learning, and scientific computing. Below is a step-by-step guide to install Anaconda on macOS, Windows, and Linux.
