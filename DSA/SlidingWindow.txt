@@ -1,5 +1,5 @@
 1. Count the occurrences of Anagrams
 2.Find the all Anagrams in string
-3.Minimum sum subarray sum
+3.Minimum size subarray sum
 4.First Negative integer in every window of size k window size
 5.Minimum window substring 
