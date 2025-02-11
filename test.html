@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily To-Do List & Notes</title>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></script>
+    <style>
+        .editable-area {
+            min-height: 150px;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .editable-area:empty:before {
+            content: "Start typing your notes here...";
+            color: #aaa;
+        }
+
+        .editable-area:focus {
+            border-color: #4A90E2;
+            box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+        }
+
+        .todo-list {
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .todo-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .highlighted {
+            background-color: #f8d7da;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .test {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+
+    <div class="max-w-xl w-full p-6 bg-white rounded-lg shadow-xl">
+        <div class="test">Hi Risu, hope you're having a wonderful day! What's on your mind?</div>
+
+        <!-- To-Do List Section -->
+        <div>
+            <h2 class="font-semibold text-lg mb-4">Today's To-Do List</h2>
+            <div class="todo-list" id="todo-list">
+                <!-- To-Do items will appear here -->
+            </div>
+            <div class="mt-4 flex">
+                <input
+                    type="text"
+                    id="new-task-input"
+                    class="w-full p-2 border border-gray-300 rounded-lg"
+                    placeholder="Add a new task..."
+                />
+                <button
+                    id="add-task-button"
+                    class="ml-2 p-2 bg-blue-500 text-white rounded-lg"
+                >
+                    Add Task
+                </button>
+            </div>
+        </div>
+
+        <!-- Highlighted Notes Section -->
+        <div class="mt-6">
+            <h2 class="font-semibold text-lg mb-4">Important Notes</h2>
+            <div class="highlighted">
+                Make sure to review the project deadline and clarify any remaining doubts!
+            </div>
+        </div>
+
+        <!-- Editable Content Area for Notes -->
+        <div class="mt-6">
+            <h2 class="font-semibold text-lg mb-4">Notes</h2>
+            <div
+                contenteditable="true"
+                class="editable-area"
+                role="textbox"
+                aria-placeholder="Start typing your notes here..."
+                aria-label="Editable content"
+            >
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to add a new to-do item
+        function addTodoItem(task) {
+            const todoList = document.getElementById('todo-list');
+            const todoItem = document.createElement('div');
+            todoItem.classList.add('todo-item');
+
+            todoItem.innerHTML = `
+                <input type="checkbox">
+                <label>${task}</label>
+            `;
+
+            todoList.appendChild(todoItem);
+        }
+
+        // Add task when the button is clicked
+        document.getElementById('add-task-button').addEventListener('click', function() {
+            const newTaskInput = document.getElementById('new-task-input');
+            const task = newTaskInput.value.trim();
+
+            if (task) {
+                addTodoItem(task);
+                newTaskInput.value = ''; // Clear input field
+            }
+        });
+
+        // Add task when Enter key is pressed
+        document.getElementById('new-task-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const task = event.target.value.trim();
+
+                if (task) {
+                    addTodoItem(task);
+                    event.target.value = ''; // Clear input field
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
